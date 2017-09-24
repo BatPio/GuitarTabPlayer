@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>guitartabplayer</id>
+    <name>Guitar Tab Player</name>
+    <summary>Displays guitar tabs using alphaTab library</summary>
+    <description><![CDATA[Simple plugin that allows view and play guitar tabs directly in Nextcloud using alphaTab library]]></description>
+    <licence>agpl</licence>
+    <author mail="prbator@gmail.com" homepage="https://github.com/BatPio/">BatPio</author>
+    <version>0.0.1</version>
+    <namespace>GuitarTabPlayer</namespace>
+    <category>files</category>
+    <category>multimedia</category>
+    <bugs>https://github.com/BatPio/GuitarTabPlayer/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="12" max-version="12"/>
+    </dependencies>
+    <navigations>
+        <navigation>
+            <name>Guitar Tab Player</name>
+            <route>guitartabplayer.page.index</route>
+        </navigation>
+    </navigations>
+</info>
