@@ -30,7 +30,6 @@ class PageController extends Controller {
 	 * @NoCSRFRequired
 	 */
 	public function index() {
-		$params = [];
 		return new TemplateResponse('guitartabplayer', 'index');  // templates/index.php
 	}
 

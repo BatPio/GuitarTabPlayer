@@ -1,5 +1,4 @@
 <?php
-script('guitartabplayer', 'script');
 style('guitartabplayer', 'style');
 ?>
 
