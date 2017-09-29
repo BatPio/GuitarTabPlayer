@@ -1,3 +1,68 @@
-#hello {
-	color: red;
+/* AlphaTab notes*/
+	
+.barCursor {
+	background: rgba(255, 242, 0, 0.25);
+	z-index: 1;
+}
+
+.beatCursor {
+	background: rgba(255, 0, 0, 0.75);
+	z-index: 2;
+}
+
+.selectionWrapper div {
+	background: rgba(64, 64, 255, 0.1);
+}
+
+.atHighlight * {
+	fill: #0078ff;
+}
+
+/* Control panel */
+
+.controls {
+	position: fixed;
+	background: white;
+	z-index: 1001;
+	width: 100%;
+	padding: 8px 5px 8px 5px;
+	border-bottom:1px solid #dcdcdc;
+
+}
+
+.controls > .button {
+	vertical-align: bottom;
+}
+
+#alphaTab {
+	padding-top: 30px;
+}
+
+#trackList {
+	min-width: 385px;
+}
+
+#trackList .indicator{
+	font-family: 'icomoon' !important;
+	font-size: 35px;
+	display: inline-block;
+	line-height: 60px;
+	width: 55px;
+	text-align: center;
+}
+
+#trackList .track-panel {
+	display: inline-block;
+}
+
+#trackList .indicator:before{
+	content: "\ea56";
+}
+
+#trackList .selected .indicator:before{
+	content: "\ea55";
+}
+
+body {
+	margin: 0;
 }

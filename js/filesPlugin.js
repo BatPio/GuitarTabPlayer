@@ -23,12 +23,15 @@
     
             hide: function() {
                 this.$container.hide();
+                this.$container.html("");
                 FileList.setViewerMode(false);
+                $('#app-content-files').show();
             },
     
             show: function(downloadUrl, isFileList) {
                 if(isFileList === true) {
                     FileList.setViewerMode(true);
+                    $('#app-content-files').hide();
                 }
                 this.loadPlayer(this.$container, downloadUrl);
                 this.$container.show();
@@ -37,7 +40,7 @@
             loadPlayer: function(container, downloadUrl) {
                 var _self = this;
                 var viewer = OC.generateUrl('/apps/guitartabplayer/tabPlayer?file={file}', {file: downloadUrl});   
-                container.html('<div><div style="float: right;"><div id="guitartabplayer_close" style="color: black;height: 50px;width: 50px;">Close</div></div><iframe id="guitarTabPlayerFrame" style="width:100%;height:100%;display:block;position:absolute;top:50px;z-index:1041;" src="'+viewer+'" sandbox="allow-scripts allow-same-origin allow-popups allow-modals allow-top-navigation" /></div>');
+                container.html('<div><span id="guitartabplayer_close" style="position: absolute; right: 0; z-index: 1; font-size: 25px; line-height: 55px; width: 55px;">&#x2716;</span><iframe id="guitarTabPlayerFrame" style="width:100%;height:100%;display:block;position:absolute;top:0px;" src="'+viewer+'" sandbox="allow-scripts allow-same-origin allow-popups allow-modals allow-top-navigation" /></div>');
                 $('#app-content').append(container);
                 $('#guitartabplayer_close').click(function(e){
                     _self.hide();
