@@ -15,10 +15,4 @@
     <dependencies>
         <nextcloud min-version="12" max-version="12"/>
     </dependencies>
-    <navigations>
-        <navigation>
-            <name>Guitar Tab Player</name>
-            <route>guitartabplayer.page.index</route>
-        </navigation>
-    </navigations>
 </info>
