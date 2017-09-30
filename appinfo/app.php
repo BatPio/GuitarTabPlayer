@@ -12,10 +12,4 @@ namespace OCA\GuitarTabPlayer\AppInfo;
 
 use OCP\Util;
 
-// Register custom mimetype
-$mimeTypeDetector = \OC::$server->getMimeTypeDetector();
-$mimeTypeDetector->getAllMappings();
-$mimeTypeDetector->registerType('gp3', 'application/x-guitarpro', 'application/x-guitarpro');
-$mimeTypeDetector->registerType('gp4', 'application/x-guitarpro', 'application/x-guitarpro');
-
 Util::addScript('guitartabplayer', 'filesPlugin');

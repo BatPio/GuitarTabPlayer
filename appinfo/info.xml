@@ -15,4 +15,12 @@
     <dependencies>
         <nextcloud min-version="12" max-version="12"/>
     </dependencies>
+    <repair-steps>
+        <install>
+            <step>OCA\GuitarTabPlayer\Migration\UpdateFilecache</step>
+        </install>
+        <uninstall>
+            <step>OCA\GuitarTabPlayer\Migration\RestoreFilecache</step>
+        </uninstall>
+    </repair-steps>
 </info>
